@@ -17,7 +17,9 @@
 }
 
 
-/* ****************************** HTML Tags and homepage************************************ */
+
+
+/* ****************************** HTML and main Tags************************************ */
 
 *{
     margin: 0;
@@ -29,6 +31,8 @@
 body{
     background: var(--color1);
     position: relative;
+    width: auto;
+    height: 100vh;
 }
 
 h1{
@@ -39,24 +43,47 @@ h1{
     color: var(--color3);
 }
 
+p::first-letter {
+    color: var(--color3);
+    font-size: 1.6rem;
+}
+
 .lorem {
     text-align: justify;
     margin: 40px auto;
-    width: 75%;
     color: var(--color2);
 }
 
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+}
+
+.article {
+    position: relative;
+    margin: auto;
+    width: 65%;
+}
+
+@media screen and (max-width: 700px) {
+    .article {
+        width: 80%;
+    }
+}
 
 /* ****************************** Navbar ************************************ */
 
 #navbar {
-    position: absolute;
+    position: fixed;
     background: var(--color3);
     height: 100vh;
     width: 240px;
-    top: -60px;
+    top: 0px;
     left: -240px;
     transition: 0.5s ease-in-out;
+    z-index: 1;
 }
 
 a {
@@ -111,6 +138,9 @@ a:hover{
     transform: rotate(-45deg) translateY(-200%);
 }
 
+#navbar.active ~ .content {
+    opacity: 0.3;
+}
 
 /* ****************************** Click Event ************************************ */
 
@@ -151,3 +181,34 @@ img {
 
 
 /* ****************************** Mouse Event ************************************ */
+
+.mouseEvent {
+    border: var(--color4) solid 5px;
+    border-radius: 18px;
+    text-align: center;
+    color: var(--color3);
+    font-size: 1.6rem;
+    width: 600px;
+    height: 140px;
+    position: relative;
+    left: 50%;;
+    transform: translateX(-50%);
+}
+
+.mouseEventContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.horizontal, .vertical {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .mouseEvent {
+        width: 320px;
+        font-size: 1.3rem;
+    }
+}

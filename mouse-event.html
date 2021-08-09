@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Click Event</title>
+    <title>Mouse Event</title>
 </head>
-<body data-title="click-event">
+<body>
     <nav id="navbar">
         <div id="toggle-btn">
             <span></span>
@@ -23,15 +23,17 @@
 
     <div class="content">
         <div class="article">
-            <h1>Click Event</h1>
-            <div class="clickEvent">
-                <button class="btn" id="btn">Clique ici !</button>
-                <img id="img" src="./assets/img/lake.jpg" alt="lake-img">
+            <h1>Mouse Event</h1>
+            <div class="mouseEvent">
+                <div class="mouseEventContainer">
+                    <div>Horizontal :<span class="horizontal">0</span></div>
+                    <div>Vertical :<span class="vertical">0</span></div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="./js/index.js"></script>
-    <script src="./js/click-event.js"></script>
+    <script src="./js/mouse-event.js"></script>
 </body>
 </html>
