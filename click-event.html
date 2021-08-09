@@ -8,14 +8,28 @@
     <title>JS en vrac</title>
 </head>
 <body>
-    <div class="include" include-html="./assets/nav/navbar.html"></div>
-    <h1>Click Event</h1>
-    <div class="clickEvent">
-        <button class="btn" id="btn">Clique ici !</button>
-        <img id="img" src="./assets/img/lake.jpg" alt="lake-img">
+    <nav id="navbar">
+        <div id="toggle-btn">
+            <span></span>
+            <span></span>
+          <span></span>
+       </div>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../click-event.html">Click Event</a></li>
+            <li><a href="#">Mouse Event</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Click Event</h1>
+        <div class="clickEvent">
+            <button class="btn" id="btn">Clique ici !</button>
+            <img id="img" src="./assets/img/lake.jpg" alt="lake-img">
+        </div>
     </div>
 
     <script src="./js/index.js"></script>
-    <script src="./js/include.js"></script>
+    <script src="./js/click-event.js"></script>
 </body>
 </html>

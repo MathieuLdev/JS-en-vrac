@@ -49,33 +49,37 @@ h1{
 
 /* ****************************** Navbar ************************************ */
 
-.navbar {
+#navbar {
     position: absolute;
     background: var(--color3);
     height: 100vh;
     width: 240px;
     top: -60px;
-    /* left: -240px; */
-    /* box-shadow: 1px 0px 30px 3px var(--color2); */
+    left: -240px;
+    transition: 0.5s ease-in-out;
 }
 
-li {
+a {
     font-size: 1.8rem;
     text-decoration: none;
     color: var(--color1);
+    margin-left: 10px;
 }
 
+a:hover{
+    color: var(--color4);
+}
 
-.toggle-btn {
+#toggle-btn {
     position: absolute;
-    top: 25px;
-    left: 270px;
+    top: 15px;
+    left: 260px;
     cursor: pointer;
     height: 50px;
     width: 50px;
 }
 
-.toggle-btn span {
+#toggle-btn span {
     width: 60px;
     height: 10px;
     border-radius: 5px;
@@ -83,6 +87,28 @@ li {
     display: block;
     margin-top: 4px;
     transition: 0.5s ease;
+}
+
+#navbar.active {
+    left: 0;
+    box-shadow: 1px 0px 30px 3px var(--color2);
+}
+
+#nav.active span {
+    position:absolute;
+}
+
+#navbar.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(200%);
+
+}
+
+#navbar.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-200%);
 }
 
 

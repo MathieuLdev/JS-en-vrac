@@ -1,7 +1,15 @@
-const btn = document.getElementById('btn');
-const img = document.getElementById('img');
+const tglBtn = document.getElementById('toggle-btn');
+const navBar = document.getElementById('navbar');
 
-btn.addEventListener('click', () => {
-    img.classList.toggle('show');
-})
+tglBtn.addEventListener('click', showNavBar);
+
+function showNavBar(){
+    navBar.classList.toggle('active');
+}
+
+const content = document.querySelector('.content');
+
+content.addEventListener('click', () => {
+    navBar.classList.remove('active');
+});
 
