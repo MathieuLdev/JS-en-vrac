@@ -33,6 +33,7 @@ body{
     position: relative;
     width: auto;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 h1{
@@ -211,4 +212,14 @@ img {
         width: 320px;
         font-size: 1.3rem;
     }
+}
+
+.mouseMove {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border: 3px solid var(--color3);
+    border-radius: 50px;
+    visibility: hidden;
+    z-index: -1;
 }
