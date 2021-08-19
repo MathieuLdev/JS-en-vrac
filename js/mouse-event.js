@@ -25,6 +25,7 @@ mouseEvent.addEventListener('mousemove', (e) => {
 
 function enter () {
     mouseMove.style.border = "3px solid var(--color5)";
+    mouseMove.style.filter = "blur(1.1px)";
 }
 
 mouseEvent.addEventListener('mouseenter', enter);
@@ -36,6 +37,7 @@ coord.addEventListener('mouseenter', enter);
 
 mouseEvent.addEventListener('mouseout', () => {
     mouseMove.style.border = "3px solid var(--color3)";
+    mouseMove.style.filter = "blur(0)";
 });
 
 window.addEventListener('mousemove', (e) => {
@@ -43,6 +45,7 @@ window.addEventListener('mousemove', (e) => {
     mouseMove.style.top = e.pageY + "px";
     mouseMove.style.visibility = "visible";
     mouseMove.style.transform = "translate(-50%, -50%)";
+    
 });
 
 
