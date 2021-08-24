@@ -30,11 +30,36 @@
                 <p>Vous avez appuyez sur la touche : <span id="key"></span></p>
             </div>
             <div class="bravo">Bravo !</div>
+            
+            <div class="scrollEvent">
+                <h1>Scroll Event</h1>
+                <p class="scroll">Vas-y ! Scroll !</p>
+            </div>
+            
+            <div class="formEvent">
+                <h1>Form Event</h1>
+                <form action="" class="form">
+                    <input class="name" type="text" id="name" placeholder="Entrez votre nom">
+                    
+                    <select class="select" id="select">
+                        <option value="">Sélectionnez votre langage préféré</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="C#">C#</option>
+                    </select>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="cg">
+                        <label for="cg">Accepter les conditions générales</label>
+                    </div>
+
+                    <input type="submit" value="Valider">
+                </form>
+                <div class="showForm"></div>
+            </div>
         </div>
-        <div class="scrollEvent">
-            <h1>Scroll Event</h1>
-            <p class="scroll">Vas-y ! Scroll !</p>
-        </div>
+        <div class="scrollBar" id="scrollBar">Il y a un formulaire caché !</div>
     </div>
 
 <script src="./js/index.js"></script>

@@ -40,7 +40,7 @@ h1{
     position: relative;
     font-family: "font-2", sans-serif;
     text-align: center;
-    margin: 60px;
+    margin: 60px 0;
     font-size: 4rem;
     color: var(--color3);
 }
@@ -269,6 +269,11 @@ img {
     visibility: visible;
 }
 
+#key {
+    font-size: 1.6rem;
+    margin-left: 5px;
+}
+
 @media screen and (max-width: 850px) {
     .keypress {
         height: 150px;
@@ -279,14 +284,99 @@ img {
 /* ****************************** Scroll Event************************************ */
 
 .scrollEvent h1{
-    margin: 100px 0 0 0;
-}
-
-.someEvent {
-    height: 200vh;
+    margin: 130px 0 0 0;
 }
 
 .scroll {
     text-align: center;
+    margin: 20px auto;
+    font-size: 1.6rem;
+    color: var(--color3);
+    font-weight: bolder;
+}
 
+.scrollBar {
+    background: var(--color3);
+    color: var(--color4);
+    position: fixed;
+    width: 92%;
+    right: 0;
+    height: 80px;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 24px;
+    top: -80px;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1100px) {
+    .scrollBar {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .scrollBar {
+        width: 80%;
+    }
+}
+
+/* ****************************** Form Event************************************ */
+
+.formEvent {
+    position: absolute;
+    /* top: 180%; */
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: var(--color3);
+    color: var(--color4);
+    border-radius: 15px;
+    box-shadow: rgba(20, 21, 62, 0.6) 5px 5px, rgba(20, 21, 62, 0.45) 10px 10px, rgba(20, 21, 62, 0.3) 15px 15px, rgba(20, 21, 62, 0.2) 20px 20px;
+}
+
+input, select {
+    margin: 10px 0px;
+    padding: 7px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color3);
+    background-color: var(--color1);
+    border: 4px solid var(--color1);
+    transition: 0.4s ease;
+}
+
+select, input[type="submit"]{
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    font-size: 1.2rem;
+}
+
+input[type="submit"]:hover {
+    border: 4px solid var(--color1);
+    border-radius: 50px;
+    letter-spacing: 2px;
+    background: var(--color3);
+    color: var(--color4);
+}
+input[type="submit"]:active {
+    transform: scale(1.1);
+}
+
+.showForm {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.2rem;
+    color: var(--color3);
 }
