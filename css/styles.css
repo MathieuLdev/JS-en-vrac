@@ -325,7 +325,7 @@ img {
 
 .formEvent {
     position: absolute;
-    /* top: 180%; */
+    top: 180%;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
