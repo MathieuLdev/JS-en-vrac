@@ -380,3 +380,52 @@ input[type="submit"]:active {
     font-size: 1.2rem;
     color: var(--color3);
 }
+
+/* ****************************** Calculatrice ************************************ */
+
+.calculatrice {
+    display: grid;
+    width: 350px;
+    margin: 0 auto;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 60px repeat(5, 40px);
+    grid-template-areas: 
+    "res res res res"
+    "7 8 9 reset"
+    "4 5 6 reset"
+    "1 2 3 reset"
+    "0 dot plus minus"
+    "equal equal times div";
+    border: 2px solid var(--color3);
+    border-radius: 4px;
+}
+
+.result {
+    text-align: right;
+    padding: 7px;
+    font-size: 2rem;
+    color: var(--color3);
+    grid-area: res;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#clear {
+    grid-area: reset;
+}
+
+.calculatrice button {
+    background: var(--color3);
+    color: var(--color4);
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calculatrice button:hover {
+    opacity: 0.8;
+}
