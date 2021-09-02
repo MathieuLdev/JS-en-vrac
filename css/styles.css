@@ -429,3 +429,37 @@ input[type="submit"]:active {
 .calculatrice button:hover {
     opacity: 0.8;
 }
+
+/* ****************************** Bulles ************************************ */
+
+.bubbles-body {
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 300px;
+    background: var(--color4);
+    opacity: 0;
+    animation: anim 8s forwards;
+    filter: hue-rotate(0deg)
+}
+
+@keyframes anim {
+    to {
+        top: -250px;
+        left: var(--left);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
+}
+
+h3 {
+    font-family: "font-2", sans-serif;
+    font-size: 10rem;
+    text-align: center;
+    color: var(--color2);
+    opacity: 0.6;
+    user-select: none;
+}
